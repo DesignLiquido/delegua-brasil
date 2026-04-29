@@ -1,0 +1,40 @@
+{
+  "name": "@designliquido/delegua-brasil",
+  "version": "0.0.1",
+  "description": "Biblioteca de utilidades relacionadas ao Brasil para Delégua",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "empacotar": "rm -rf dist && tsc --emitDeclarationOnly && esbuild fontes/index.ts --bundle --platform=node --format=cjs --outfile=dist/index.js --sourcemap && cp README.md dist/ && cp package.json dist/",
+    "publicar-npm": "cd dist && npm publish --registry https://registry.npmjs.org",
+    "testes-unitarios": "jest --coverage",
+    "lint": "eslint fontes/**/*.ts"
+  },
+  "author": "Design Liquido",
+  "license": "MIT",
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  },
+  "dependencies": {
+    "@brazilian-utils/brazilian-utils": "^2.3.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.24.0",
+    "@babel/preset-env": "^7.24.0",
+    "@babel/preset-typescript": "^7.24.0",
+    "@designliquido/delegua": "^1.19.0",
+    "@types/jest": "^29.5.0",
+    "@types/node": "^20.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "babel-jest": "^29.7.0",
+    "esbuild": "^0.20.0",
+    "eslint": "^8.0.0",
+    "jest": "^29.7.0",
+    "typescript": "^5.4.0"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org",
+    "access": "public"
+  }
+}

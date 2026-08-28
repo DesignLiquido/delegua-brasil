@@ -1,6 +1,6 @@
 {
   "name": "@designliquido/delegua-brasil",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "description": "Biblioteca de utilidades relacionadas ao Brasil para Delégua",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -13,7 +13,7 @@
   "author": "Design Liquido",
   "license": "MIT",
   "engines": {
-    "node": "^20.19.0 || >=22.12.0"
+    "node": "^20.19.0 || >=24"
   },
   "dependencies": {
     "@brazilian-utils/brazilian-utils": "^2.3.0"
@@ -22,7 +22,7 @@
     "@babel/core": "^7.24.0",
     "@babel/preset-env": "^7.24.0",
     "@babel/preset-typescript": "^7.24.0",
-    "@designliquido/delegua": "^1.19.0",
+    "@designliquido/delegua": "^1.27.2",
     "@types/jest": "^29.5.0",
     "@types/node": "^20.0.0",
     "@typescript-eslint/eslint-plugin": "^6.0.0",

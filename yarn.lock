@@ -928,10 +928,10 @@
   resolved "https://registry.yarnpkg.com/@brazilian-utils/brazilian-utils/-/brazilian-utils-2.3.0.tgz#99873918cb752ff0ec651dbd4c9cd4046a449db2"
   integrity sha512-gycd2tRqkWcS5bhSjFDgnvxIXjQuxr32xw5BAkflNpEp12r+FkuK60CDb48U7xJAszNt3sPW6u9hxEcea+CZPQ==
 
-"@designliquido/delegua@^1.19.0":
-  version "1.19.0"
-  resolved "https://registry.yarnpkg.com/@designliquido/delegua/-/delegua-1.19.0.tgz#144304db91c20de6431a3f6ad527076aea1a9cd5"
-  integrity sha512-5xzZqNwRUhOveMeDHShyL2Q00Mg5kEnyA8Kjd3/BRx61V7eUwmAUB2ZMsrFiMuS4dPVGnuoD/GZC0D6Evd2g1w==
+"@designliquido/delegua@^1.27.2":
+  version "1.27.2"
+  resolved "https://registry.yarnpkg.com/@designliquido/delegua/-/delegua-1.27.2.tgz#6739b065883285a2bbf2aecd312f146775730db4"
+  integrity sha512-nDonEME4I85Tj+EH884ntP5kBuomIE3PBbZr2tQW5Aj5XQGGebpcUZPKHZ1LKNILfCbjhqys6dYY7/J7Yv3EFA==
   dependencies:
     antlr4ts "^0.5.0-alpha.4"
     browser-process-hrtime "^1.0.0"

@@ -10,11 +10,11 @@ export function cnpjValido(_: InterpretadorInterface, cnpj: string): boolean {
     return isValidCnpj(cnpj);
 }
 
-export function formatarCnpj(_: InterpretadorInterface, cnpj: string, opcoes?: { completar?: boolean; versao?: number }): string {
+export function formatarCnpj(_: InterpretadorInterface, cnpj: string, opcoes?: { completar?: boolean; versao?: 1 | 2 }): string {
     return formatCnpj(cnpj, { pad: opcoes?.completar, version: opcoes?.versao });
 }
 
-export function limparCnpj(_: InterpretadorInterface, cnpj: string, opcoes?: { versao?: number }): string {
+export function limparCnpj(_: InterpretadorInterface, cnpj: string, opcoes?: { versao?: 1 | 2 }): string {
     return parseCnpj(cnpj, { version: opcoes?.versao });
 }
 

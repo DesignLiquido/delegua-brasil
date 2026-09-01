@@ -20,7 +20,7 @@ export function limparPlacaVeiculo(_: InterpretadorInterface, placa: string): st
 }
 
 export function gerarPlacaVeiculo(_: InterpretadorInterface, formato?: string): string {
-    return generateLicensePlate(formato);
+    return generateLicensePlate(formato as Parameters<typeof generateLicensePlate>[0]);
 }
 
 export function obterFormatoPlacaVeiculo(_: InterpretadorInterface, placa: string): string | null {

@@ -15,5 +15,5 @@ export function obterEstados(_: InterpretadorInterface): Estado[] {
 }
 
 export function obterCidades(_: InterpretadorInterface, codigoEstado?: string): string[] {
-    return getCities(codigoEstado);
+    return getCities(codigoEstado as Parameters<typeof getCities>[0]);
 }

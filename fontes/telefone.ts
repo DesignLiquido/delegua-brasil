@@ -4,7 +4,8 @@
     parsePhone,
     isValidMobilePhone,
     isValidLandlinePhone,
-    generatePhone
+    generatePhone,
+    FormatPhoneOptions
 } from '@brazilian-utils/brazilian-utils';
 import { InterpretadorInterface } from '@designliquido/delegua/interfaces/interpretador-interface';
 
@@ -12,7 +13,7 @@ export function telefoneValido(_: InterpretadorInterface, telefone: string): boo
     return isValidPhone(telefone);
 }
 
-export function formatarTelefone(_: InterpretadorInterface, telefone: string, opcoes?: { mascara?: string }): string {
+export function formatarTelefone(_: InterpretadorInterface, telefone: string, opcoes?: { mascara?: FormatPhoneOptions['mask'] }): string {
     return formatPhone(telefone, { mask: opcoes?.mascara });
 }
 

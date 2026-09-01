@@ -10,11 +10,27 @@ describe('contaBancariaValida', () => {
         mockIsValidBankAccount.mockReturnValue(true);
         const conta = { banco: '001', agencia: '1234', conta: '12345', digito: '6' };
         expect(contaBancariaValida(undefined, conta)).toBe(true);
-        expect(mockIsValidBankAccount).toHaveBeenCalledWith(conta);
+        expect(mockIsValidBankAccount).toHaveBeenCalledWith({
+            bankCode: '001',
+            agency: '1234',
+            account: '12345',
+            digit: '6'
+        });
     });
 
     it('retorna falso para conta inválida', () => {
         mockIsValidBankAccount.mockReturnValue(false);
         expect(contaBancariaValida(undefined, { banco: '000' })).toBe(false);
+    });
+
+    it('preenche campos ausentes com string vazia', () => {
+        mockIsValidBankAccount.mockReturnValue(false);
+        expect(contaBancariaValida(undefined, {})).toBe(false);
+        expect(mockIsValidBankAccount).toHaveBeenCalledWith({
+            bankCode: '',
+            agency: '',
+            account: '',
+            digit: ''
+        });
     });
 });

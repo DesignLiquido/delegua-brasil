@@ -19,5 +19,5 @@ export function limparTituloEleitor(_: InterpretadorInterface, titulo: string): 
 }
 
 export function gerarTituloEleitor(_: InterpretadorInterface, codigoEstado?: string): string {
-    return generateVoterId(codigoEstado);
+    return generateVoterId(codigoEstado as Parameters<typeof generateVoterId>[0]);
 }

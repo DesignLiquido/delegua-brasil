@@ -54,7 +54,7 @@ describe('obterInfoBoleto', () => {
         const vencimento = new Date('2024-01-31');
         mockGetInfo.mockReturnValue({ amount: 299, expirationDate: vencimento, bankCode: '341' });
         const info = obterInfoBoleto(undefined, '34191790010104351004791020150008285480000029900');
-        expect(info.valor).toBe(299);
+        expect(info.valorBoleto).toBe(299);
         expect(info.dataVencimento).toBe(vencimento);
         expect(info.codigoBanco).toBe('341');
     });

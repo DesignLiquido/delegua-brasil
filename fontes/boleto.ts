@@ -27,7 +27,7 @@ export function gerarBoleto(_: InterpretadorInterface): string {
 export function obterInfoBoleto(_: InterpretadorInterface, boleto: string): InfoBoleto {
     const info = getBoletoInfo(boleto);
     return {
-        valor: info.amount,
+        valorBoleto: info.amount,
         dataVencimento: info.expirationDate,
         codigoBanco: info.bankCode
     };
